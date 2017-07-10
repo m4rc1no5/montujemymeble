@@ -6,13 +6,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class PytaniaController extends Controller
 {
     /**
-     * @Route("/", name="onas")
+     * @Route("/pytania", name="pytania")
      * @Template()
      */
-    public function onasAction()
+    public function pytaniaAction()
     {
         return [];
     }

@@ -6,13 +6,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class KontaktController extends Controller
 {
     /**
-     * @Route("/", name="onas")
+     * @Route("/kontakt", name="kontakt")
      * @Template()
      */
-    public function onasAction()
+    public function kontaktAction()
     {
         return [];
     }

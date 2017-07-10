@@ -6,13 +6,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class GaleriaController extends Controller
 {
     /**
-     * @Route("/", name="onas")
+     * @Route("/galeria", name="galeria")
      * @Template()
      */
-    public function onasAction()
+    public function galeriaAction()
     {
         return [];
     }
