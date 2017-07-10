@@ -48,6 +48,26 @@
     font-family: Arial;
 }
 
+#menu a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#menu a:hover {
+    text-decoration: none;
+    background-color: #777;
+}
+
+#link_ikea_brw a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#link_ikea_brw a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
 /*********************************************************************************/
 /* Zdjęcia                                                                        */
 /*********************************************************************************/

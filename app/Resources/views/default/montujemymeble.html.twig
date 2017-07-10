@@ -39,7 +39,7 @@
 
 <div class="container" id="background">
     <div class="row" id="logo-foto">
-        <img src='{{ asset('pictures/img_03.jpg') }}'>
+        <a href="{{ path('start') }}"><img src='{{ asset('pictures/img_03.jpg') }}'></a>
     </div>
     <div class="row" id="main-foto">
         <img src='{{ asset('pictures/img_07.jpg') }}'>
@@ -53,6 +53,10 @@
                 <li><a href="#"><img src="{{ asset('pictures/pytania_ikona.jpg') }}"> Pytania</a></li>
                 <li><a href="#"><img src="{{ asset('pictures/linki_ikona.jpg') }}"> Linki</a></li>
                 <li><a href="#"><img src="{{ asset('pictures/kontakt_ikona.jpg') }}"> Kontakt</a></li>
+            </ul>
+            <ul class="nav" id="link_ikea_brw">
+                <li><a href="http://www.ikea.com/pl/" target="_blank"><img src="{{ asset('pictures/logo_ikea_s.jpg') }}"></a></li>
+                <li><a href="http://brw.com.pl/pl" target="_blank"><img src="{{ asset('pictures/logo_brw_s.jpg') }}"></a></li>
             </ul>
         </div>
         <div class="col-lg-9">
