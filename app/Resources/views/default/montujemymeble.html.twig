@@ -2,11 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
     <meta name="Anna Zaremba" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-    <title>Montujemy meble</title>
+    <title>ARTIFICIUM: Profesjonalny montaż mebli</title>
+
+    <!-- CSS -->
+    <link href="{{ asset('public/bootstrap-3.3.7/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{{ asset('public/bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css') }}"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('public/bootstrap-3.3.7/docs/examples/justified-nav/justified-nav.css') }}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('public/bootstrap-3.3.7/docs/assets/js/ie8-responsive-file-warning.js') }}"></script>
+    <![endif]-->
+    <script src="{{ asset('public/bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js') }}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-{% block body %}{% endblock %}
+
+<body id="body">
+
+<div class="container" id="background">
+    <div class="row" id="logo-foto">
+        <img src='{{ asset('pictures/img_03.jpg') }}'>
+    </div>
+    <div class="row" id="main-foto">
+        <img src='{{ asset('pictures/img_07.jpg') }}'>
+    </div>
+    <div class="row" id="menubody">
+        <div class="col-lg-3">
+            <ul class="nav nav-sidebar" id="menu">
+                <li><a href="#"><img src="{{ asset('pictures/onas_ikona.jpg') }}"> O nas</a></li>
+                <li><a href="#"><img src="{{ asset('pictures/oferta_ikona.jpg') }}"> Oferta</a></li>
+                <li><a href="#"><img src="{{ asset('pictures/galeria_ikona.jpg') }}"> Galeria</a></li>
+                <li><a href="#"><img src="{{ asset('pictures/pytania_ikona.jpg') }}"> Pytania</a></li>
+                <li><a href="#"><img src="{{ asset('pictures/linki_ikona.jpg') }}"> Linki</a></li>
+                <li><a href="#"><img src="{{ asset('pictures/kontakt_ikona.jpg') }}"> Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-9">
+            {% block bodyblock %}{% endblock %}
+        </div>
+    </div>
+    <div class="row">
+        <footer class="footer" id="footer">
+            <div class="text-muted">Copyright &copy; <a href="#">Anna Zaremba</a> 2017</div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ asset('public/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js') }}"></script>
 </body>
 </html>
