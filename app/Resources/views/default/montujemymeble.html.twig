@@ -7,7 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="Anna Zaremba" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>ARTIFICIUM: Profesjonalny montaż mebli</title>
 
@@ -39,24 +38,26 @@
 
 <div class="container" id="background">
     <div class="row" id="logo-foto">
-        <a href="{{ path('onas') }}"><img src='{{ asset('pictures/img_03.jpg') }}'></a>
+        <a href="{{ path('onas') }}"><img src='{{ asset('images/img_03.jpg') }}'></a>
     </div>
     <div class="row" id="main-foto">
-        <img src='{{ asset('pictures/img_07.jpg') }}'>
+        <img src='{{ asset('images/img_07.jpg') }}'>
     </div>
     <div class="row" id="menubody">
         <div class="col-lg-3">
             <ul class="nav nav-sidebar" id="menu">
-                <li><a href="{{ path('onas') }}"><img src="{{ asset('pictures/onas_ikona.jpg') }}"> O nas</a></li>
-                <li><a href="{{ path('oferta') }}"><img src="{{ asset('pictures/oferta_ikona.jpg') }}"> Oferta</a></li>
-                <li><a href="{{ path('galeria') }}"><img src="{{ asset('pictures/galeria_ikona.jpg') }}"> Galeria</a></li>
-                <li><a href="{{ path('pytania') }}"><img src="{{ asset('pictures/pytania_ikona.jpg') }}"> Pytania</a></li>
-                <li><a href="{{ path('linki') }}"><img src="{{ asset('pictures/linki_ikona.jpg') }}"> Linki</a></li>
-                <li><a href="{{ path('kontakt') }}"><img src="{{ asset('pictures/kontakt_ikona.jpg') }}"> Kontakt</a></li>
+                <li><a href="{{ path('onas') }}"><img src="{{ asset('images/onas_ikona.jpg') }}"> O nas</a></li>
+                <li><a href="{{ path('oferta') }}"><img src="{{ asset('images/oferta_ikona.jpg') }}"> Oferta</a></li>
+                <li><a href="{{ path('galeria') }}"><img src="{{ asset('images/galeria_ikona.jpg') }}"> Galeria</a></li>
+                <li><a href="{{ path('pytania') }}"><img src="{{ asset('images/pytania_ikona.jpg') }}"> Pytania</a></li>
+                <li><a href="{{ path('linki') }}"><img src="{{ asset('images/linki_ikona.jpg') }}"> Linki</a></li>
+                <li><a href="{{ path('kontakt') }}"><img src="{{ asset('images/kontakt_ikona.jpg') }}"> Kontakt</a></li>
             </ul>
             <ul class="nav" id="link_ikea_brw">
-                <li><a href="http://www.ikea.com/pl/" target="_blank"><img src="{{ asset('pictures/logo_ikea_s.jpg') }}"></a></li>
-                <li><a href="http://brw.com.pl/pl" target="_blank"><img src="{{ asset('pictures/logo_brw_s.jpg') }}"></a></li>
+                <li><a href="http://www.ikea.com/pl/" target="_blank"><img src="{{ asset('images/logo_ikea_s.jpg') }}"></a>
+                </li>
+                <li><a href="http://brw.com.pl/pl" target="_blank"><img src="{{ asset('images/logo_brw_s.jpg') }}"></a>
+                </li>
             </ul>
         </div>
         <div class="col-lg-9">
@@ -69,7 +70,6 @@
         </footer>
     </div>
 </div>
-
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ asset('public/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js') }}"></script>
