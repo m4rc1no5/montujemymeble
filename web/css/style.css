@@ -35,6 +35,10 @@
     padding-bottom: 15px;
 }
 
+#bodyblock2 a {
+    color: black;
+}
+
 /*********************************************************************************/
 /* Menu                                                                      */
 /*********************************************************************************/
@@ -88,6 +92,8 @@
 #footer {
     text-align: center;
     color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #footer a {
