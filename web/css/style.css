@@ -9,7 +9,7 @@
 #body .container {
     position: absolute;
     width: 910px;
-    border: 0px solid white;
+    border: 0 solid white;
     left: 50%;
     margin-left: -455px;
     background-color: #FFF;
@@ -39,8 +39,22 @@
     color: black;
 }
 
+#linki {
+    padding: 15px;
+    text-align: justify;
+}
+
+#linki a {
+    color: #777;
+}
+
+#naglowek {
+    border-bottom: 1px solid #777;
+    margin-top: -20px;
+}
+
 /*********************************************************************************/
-/* Menu                                                                      */
+/* Menu                                                                          */
 /*********************************************************************************/
 
 #menu {
@@ -70,6 +84,15 @@
 #link_ikea_brw a:hover {
     text-decoration: none;
     background-color: transparent;
+}
+
+/*********************************************************************************/
+/* Galeria                                                                       */
+/*********************************************************************************/
+
+.galeria{
+    cursor:pointer;
+    margin-bottom:10px;
 }
 
 /*********************************************************************************/
