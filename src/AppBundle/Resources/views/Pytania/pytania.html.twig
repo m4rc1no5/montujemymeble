@@ -1,66 +1,68 @@
 {% extends ':default:montujemymeble.html.twig' %}
 
 {% block bodyblock %}
-    <div class="row" id="naglowek">
-        <h3>Pytania</h3>
-    </div>
-    <div class="row" id="bodyblock">
-        <h4>Aby uzyskać bliższe informacje odnośnie naszej oferty, prosimy o kontakt:</h4>
-        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-        <div id="formularz">
-            <div>
+    <div class="col-md-9">
+        <div class="row" id="naglowek">
+            <h3>Pytania</h3>
+        </div>
+        <div class="row" id="bodyblock">
+            <h4>Aby uzyskać bliższe informacje odnośnie naszej oferty, prosimy o kontakt:</h4>
+            {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+            <div id="formularz">
                 <div>
-                    <label>Imię i nazwisko</label>
+                    <div>
+                        <label>Imię i nazwisko</label>
+                    </div>
+                    <div>
+                        {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div id="blad">
+                        {{ form_errors(form.imie) }}
+                    </div>
+                    <div>
+                        <label>Adres e-mail</label>
+                    </div>
+                    <div>
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div id="blad">
+                        {{ form_errors(form.email) }}
+                    </div>
+                    <div>
+                        <label>Telefon</label>
+                    </div>
+                    <div>
+                        {{ form_widget(form.telefon, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div id="blad">
+                        {{ form_errors(form.telefon) }}
+                    </div>
+                    <div>
+                        <label>Temat</label>
+                    </div>
+                    <div>
+                        {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div id="blad">
+                        {{ form_errors(form.temat) }}
+                    </div>
                 </div>
                 <div>
-                    {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.imie) }}
-                </div>
-                <div>
-                    <label>Adres e-mail</label>
-                </div>
-                <div>
-                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.email) }}
-                </div>
-                <div>
-                    <label>Telefon</label>
-                </div>
-                <div>
-                    {{ form_widget(form.telefon, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.telefon) }}
-                </div>
-                <div>
-                    <label>Temat</label>
-                </div>
-                <div>
-                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.temat) }}
+                    <div>
+                        <label>Wiadomość</label>
+                    </div>
+                    <div>
+                        {{ form_widget(form.wiadomosc, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div id="blad">
+                        {{ form_errors(form.wiadomosc) }}
+                    </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <label>Wiadomość</label>
-                </div>
-                <div>
-                    {{ form_widget(form.wiadomosc, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.wiadomosc) }}
-                </div>
+            <div id="przycisk">
+                <button class="btn btn-default" type="submit">Wyślij pytanie</button>
             </div>
+            {{ form_end(form) }}
         </div>
-        <div id="przycisk">
-            <button class="btn btn-default" type="submit">Wyślij pytanie</button>
-        </div>
-        {{ form_end(form) }}
     </div>
 {% endblock %}
