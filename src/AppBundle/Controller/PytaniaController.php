@@ -28,6 +28,7 @@ class PytaniaController extends Controller
         $form = $this->createFormBuilder($pytania)
             ->add('imie', TextType::class)
             ->add('email', TextType::class)
+            ->add('telefon', TextType::class)
             ->add('temat', TextType::class)
             ->add('wiadomosc', TextareaType::class)
             ->getForm();
@@ -40,6 +41,7 @@ class PytaniaController extends Controller
             $pytaniaBaza = new PytaniaBaza();
             $pytaniaBaza->setImie($pytania->getImie());
             $pytaniaBaza->setEmail($pytania->getEmail());
+            $pytaniaBaza->setTelefon($pytania->getTelefon());
             $pytaniaBaza->setTemat($pytania->getTemat());
             $pytaniaBaza->setWiadomosc($pytania->getWiadomosc());
 

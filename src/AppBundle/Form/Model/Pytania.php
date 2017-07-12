@@ -44,23 +44,19 @@ class Pytania
      *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
      * )
      */
+    private $telefon;
+
+    /**
+     * @var string
+     * @Assert\NotBlank(message="Pole nie może być puste.")
+     * @Assert\Length(
+     *     min="2",
+     *     minMessage="Pole nie może mieć mniej niż 2 znaki.",
+     *     max="128",
+     *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
+     * )
+     */
     private $temat;
-
-    /**
-     * @return string
-     */
-    public function getTemat()
-    {
-        return $this->temat;
-    }
-
-    /**
-     * @param string $temat
-     */
-    public function setTemat($temat)
-    {
-        $this->temat = $temat;
-    }
 
     /**
      * @var string
@@ -73,22 +69,6 @@ class Pytania
      * )
      */
     private $wiadomosc;
-
-    /**
-     * @return string
-     */
-    public function getWiadomosc()
-    {
-        return $this->wiadomosc;
-    }
-
-    /**
-     * @param string $wiadomosc
-     */
-    public function setWiadomosc($wiadomosc)
-    {
-        $this->wiadomosc = $wiadomosc;
-    }
 
     /**
      * @return mixed
@@ -107,7 +87,7 @@ class Pytania
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getImie()
     {
@@ -115,7 +95,7 @@ class Pytania
     }
 
     /**
-     * @param mixed $imie
+     * @param string $imie
      */
     public function setImie($imie)
     {
@@ -123,7 +103,7 @@ class Pytania
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getEmail()
     {
@@ -131,11 +111,58 @@ class Pytania
     }
 
     /**
-     * @param mixed $email
+     * @param string $email
      */
     public function setEmail($email)
     {
         $this->email = $email;
     }
 
+    /**
+     * @return string
+     */
+    public function getTelefon()
+    {
+        return $this->telefon;
+    }
+
+    /**
+     * @param string $telefon
+     */
+    public function setTelefon($telefon)
+    {
+        $this->telefon = $telefon;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTemat()
+    {
+        return $this->temat;
+    }
+
+    /**
+     * @param string $temat
+     */
+    public function setTemat($temat)
+    {
+        $this->temat = $temat;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWiadomosc()
+    {
+        return $this->wiadomosc;
+    }
+
+    /**
+     * @param string $wiadomosc
+     */
+    public function setWiadomosc($wiadomosc)
+    {
+        $this->wiadomosc = $wiadomosc;
+    }
 }

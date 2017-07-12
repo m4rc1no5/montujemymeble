@@ -30,6 +30,11 @@ class Pytania
     /**
      * @ORM\Column(type="string", length=155)
      */
+    protected $telefon;
+
+    /**
+     * @ORM\Column(type="string", length=155)
+     */
     protected $temat;
 
     /**
@@ -88,6 +93,22 @@ class Pytania
     /**
      * @return mixed
      */
+    public function getTelefon()
+    {
+        return $this->telefon;
+    }
+
+    /**
+     * @param mixed $telefon
+     */
+    public function setTelefon($telefon)
+    {
+        $this->telefon = $telefon;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getTemat()
     {
         return $this->temat;
@@ -116,6 +137,4 @@ class Pytania
     {
         $this->wiadomosc = $wiadomosc;
     }
-
-
 }

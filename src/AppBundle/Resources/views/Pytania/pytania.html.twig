@@ -19,13 +19,22 @@
                     {{ form_errors(form.imie) }}
                 </div>
                 <div>
-                    <label>E-mail</label>
+                    <label>Adres e-mail</label>
                 </div>
                 <div>
                     {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
                 </div>
                 <div id="blad">
                     {{ form_errors(form.email) }}
+                </div>
+                <div>
+                    <label>Telefon</label>
+                </div>
+                <div>
+                    {{ form_widget(form.telefon, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div id="blad">
+                    {{ form_errors(form.telefon) }}
                 </div>
                 <div>
                     <label>Temat</label>
@@ -50,7 +59,7 @@
             </div>
         </div>
         <div id="przycisk">
-            <button class="btn btn-default" type="submit">Wyślij wiadomość</button>
+            <button class="btn btn-default" type="submit">Wyślij pytanie</button>
         </div>
         {{ form_end(form) }}
     </div>
