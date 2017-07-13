@@ -6,18 +6,10 @@
     background-image: url("../images/background_01.jpg");
 }
 
-#body .container {
-    position: absolute;
-    width: 910px;
-    border: 0 solid white;
-    left: 50%;
-    margin-left: -455px;
+#body1 {
     background-color: #FFF;
-    text-align: left;
-}
-
-#background {
-    background-color: white;
+    border: 0 solid white;
+    width: 910px;
 }
 
 #menubody {
@@ -90,9 +82,9 @@
 /* Galeria                                                                       */
 /*********************************************************************************/
 
-.galeria{
-    cursor:pointer;
-    margin-bottom:10px;
+.galeria {
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 /*********************************************************************************/
