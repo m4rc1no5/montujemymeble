@@ -6,11 +6,11 @@
             <h3>Pytania</h3>
         </div>
         <div class="row" id="bodyblock">
-            <h5>Aby uzyskać bliższe informacje odnośnie naszej oferty, prosimy o kontakt:</h5>
+            Aby uzyskać bliższe informacje odnośnie naszej oferty, prosimy o kontakt:
             {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
             <div id="formularz">
                 <div>
-                    <div>
+                    <div id="form-nazwa">
                         <label>Imię i nazwisko</label>
                     </div>
                     <div>
@@ -19,7 +19,7 @@
                     <div id="blad">
                         {{ form_errors(form.imie) }}
                     </div>
-                    <div>
+                    <div id="form-nazwa">
                         <label>Adres e-mail</label>
                     </div>
                     <div>
@@ -28,7 +28,7 @@
                     <div id="blad">
                         {{ form_errors(form.email) }}
                     </div>
-                    <div>
+                    <div id="form-nazwa">
                         <label>Telefon</label>
                     </div>
                     <div>
@@ -37,7 +37,7 @@
                     <div id="blad">
                         {{ form_errors(form.telefon) }}
                     </div>
-                    <div>
+                    <div id="form-nazwa">
                         <label>Temat</label>
                     </div>
                     <div>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div id="form-nazwa">
                         <label>Wiadomość</label>
                     </div>
                     <div>
