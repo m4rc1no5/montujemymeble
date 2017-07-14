@@ -12,7 +12,7 @@ class DefaultController extends Controller
      * @Route("/", name="onas")
      * @Template()
      */
-    public function onasAction()
+    public function oNasAction()
     {
         return [];
     }

@@ -9,7 +9,8 @@
 #body1 {
     background-color: #FFF;
     border: 0 solid white;
-    width: 910px;
+    max-width: 910px;
+    min-width: auto;
 }
 
 #menubody {

@@ -51,15 +51,8 @@ class PytaniaController extends Controller
             return $this->redirectToRoute('mailwyslany');
         }
 
-        $find = $this->getDoctrine()
-            ->getRepository('AppBundle:Pytania')
-            ->findAll();
-
         return array(
             'form' => $form->createView(),
-            'isValid' => $form->isValid(),
-            'pytania' => $pytania,
-            'find' => $find,
         );
     }
 
@@ -71,7 +64,6 @@ class PytaniaController extends Controller
      */
     public function mailwyslanyAction()
     {
-        return [
-        ];
+        return [];
     }
 }
