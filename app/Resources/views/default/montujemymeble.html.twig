@@ -42,14 +42,15 @@
     <div class="row" id="logo-foto">
         <a href="{{ path('onas') }}"><img src='{{ asset('images/img_03.jpg') }}'></a>
     </div>
-    <div class="row" id="main-foto">
-        <img src='{{ asset('images/img_07.jpg') }}'>
-    </div>
     <div class="row" id="menubody">
         {% block menu %}
             {% include (':default:menu.html.twig') %}
         {% endblock %}
-
+        <div class="col-md-8" id="glowne-zdjecie">
+        <div class="row">
+            <img src='{{ asset('images/img_07.jpg') }}' class="img-thumbnail">
+        </div>
+        </div>
         {% block bodyblock %}{% endblock %}
     </div>
     <div class="row">

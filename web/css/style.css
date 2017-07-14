@@ -20,8 +20,11 @@
 }
 
 #bodyblock {
-    padding: 15px;
+
     text-align: justify;
+    margin-right: 15px;
+    margin-left: -5px;
+    padding-top: 15px;
 }
 
 #bodyblock2 {
@@ -42,8 +45,10 @@
 }
 
 #naglowek {
-    border-bottom: 1px solid #777;
+    border-bottom: 1px inset #d2d2d2;
     margin-top: -20px;
+    margin-left: -5px;
+    color: #666;
 }
 
 /*********************************************************************************/
@@ -66,7 +71,7 @@
 
 #menu a:hover {
     text-decoration: none;
-    background-color: #777;
+    background-color: transparent;
 }
 
 #link_ikea_brw a:focus {
@@ -97,8 +102,11 @@
     margin-top: -40px;
 }
 
-#main-foto {
-    text-align: center;
+#glowne-zdjecie {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 600px;
 }
 
 /*********************************************************************************/
