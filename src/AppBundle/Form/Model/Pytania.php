@@ -13,8 +13,8 @@ class Pytania
      * @Assert\Length(
      *     min="2",
      *     minMessage="Pole nie może mieć mniej niż 2 znaki.",
-     *     max="128",
-     *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
+     *     max="50",
+     *     maxMessage="Pole nie może mieć więcej niż 50 znaków."
      * )
      */
     private $imie;
@@ -25,8 +25,8 @@ class Pytania
      * @Assert\Length(
      *     min="2",
      *     minMessage="Pole nie może mieć mniej niż 2 znaki.",
-     *     max="128",
-     *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
+     *     max="50",
+     *     maxMessage="Pole nie może mieć więcej niż 50 znaków."
      * )
      * @Assert\Email(message = "Błędny adres e-mail.",
      * checkMX = true
@@ -35,13 +35,13 @@ class Pytania
     private $email;
 
     /**
-     * @var string
-     * @Assert\NotBlank(message="Pole nie może być puste.")
+     * @var integer
+     * @Assert\NotBlank(message="Pole musi zawierać jedynie cyfry.")
      * @Assert\Length(
-     *     min="2",
-     *     minMessage="Pole nie może mieć mniej niż 2 znaki.",
-     *     max="128",
-     *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
+     *     min="6",
+     *     minMessage="Pole nie może mieć mniej niż 6 znaków.",
+     *     max="50",
+     *     maxMessage="Pole nie może mieć więcej niż 50 znaków."
      * )
      */
     private $telefon;
@@ -52,8 +52,8 @@ class Pytania
      * @Assert\Length(
      *     min="2",
      *     minMessage="Pole nie może mieć mniej niż 2 znaki.",
-     *     max="128",
-     *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
+     *     max="50",
+     *     maxMessage="Pole nie może mieć więcej niż 50 znaków."
      * )
      */
     private $temat;
@@ -64,8 +64,8 @@ class Pytania
      * @Assert\Length(
      *     min="2",
      *     minMessage="Pole nie może mieć mniej niż 2 znaki.",
-     *     max="128",
-     *     maxMessage="Pole nie może mieć więcej niż 128 znaków."
+     *     max="256",
+     *     maxMessage="Pole nie może mieć więcej niż 256 znaków."
      * )
      */
     private $wiadomosc;
@@ -119,7 +119,7 @@ class Pytania
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getTelefon()
     {
@@ -127,7 +127,7 @@ class Pytania
     }
 
     /**
-     * @param string $telefon
+     * @param int $telefon
      */
     public function setTelefon($telefon)
     {

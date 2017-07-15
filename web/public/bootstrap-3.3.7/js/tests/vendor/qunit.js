@@ -1832,7 +1832,7 @@ QUnit.equiv = (function() {
 		"object": function( b, a ) {
 			var i, j, loop, aCircular, bCircular;
 
-			// Default to true
+			// ONas to true
 			var eq = true;
 			var aProperties = [];
 			var bProperties = [];

@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="pytania")
+ * @ORM\Table(name="pytanie")
  */
 class Pytania
 {
@@ -18,27 +18,27 @@ class Pytania
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=55)
+     * @ORM\Column(type="string", length=50)
      */
     protected $imie;
 
     /**
-     * @ORM\Column(type="string", length=155)
+     * @ORM\Column(type="string", length=50)
      */
     protected $email;
 
     /**
-     * @ORM\Column(type="string", length=155)
+     * @ORM\Column(type="integer")
      */
     protected $telefon;
 
     /**
-     * @ORM\Column(type="string", length=155)
+     * @ORM\Column(type="string", length=50)
      */
     protected $temat;
 
     /**
-     * @ORM\Column(type="string", length=155)
+     * @ORM\Column(type="string", length=256)
      */
     protected $wiadomosc;
 
