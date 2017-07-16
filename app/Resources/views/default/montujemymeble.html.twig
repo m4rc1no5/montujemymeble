@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Anna Zaremba" content="">
-    <meta name="keywords" content="artificium, trojmiasto, gdansk, sopot, gdynia, oklice trojmiasta, meble, meble kuchenne, kuchnia, montaz, montaz mebli, montowanie, ikea, indywidualne projekty, zabudowa, szafy, wnęki, zabudowa wnęk, garderoby, meble biurowe, przerabianie instalacji, pomiar, doradztwo, pomoc w zakupach, transport, zabudowy meblowe, garderoby, przeróbka mebli" />
-    <meta name="description" content="Firma ARTIFICIUM - montaż mebli na wymiar, meble kuchenne z IKEA, Trójmiasto, Gdańsk, Sopot, Gdynia, indywidualne projekty kuchni, kuchnie nietypowe, zabudowa wnęk, szafy, garderoby, meble biurowe" />
-    <meta name="robots" content="all" />
+    <meta name="keywords"
+          content="artificium, trojmiasto, gdansk, sopot, gdynia, oklice trojmiasta, meble, meble kuchenne, kuchnia, montaz, montaz mebli, montowanie, ikea, indywidualne projekty, zabudowa, szafy, wnęki, zabudowa wnęk, garderoby, meble biurowe, przerabianie instalacji, pomiar, doradztwo, pomoc w zakupach, transport, zabudowy meblowe, garderoby, przeróbka mebli"/>
+    <meta name="description"
+          content="Firma ARTIFICIUM - montaż mebli na wymiar, meble kuchenne z IKEA, Trójmiasto, Gdańsk, Sopot, Gdynia, indywidualne projekty kuchni, kuchnie nietypowe, zabudowa wnęk, szafy, garderoby, meble biurowe"/>
+    <meta name="robots" content="all"/>
 
     <title>ARTIFICIUM: Profesjonalny montaż mebli</title>
 
@@ -37,27 +39,30 @@
 </head>
 
 <body id="body">
-
+<div class="container" id="logo-foto">
+    <a href="{{ path('onas') }}"><img src='{{ asset('images/img_03.jpg') }}'></a>
+</div>
 <div class="container img-rounded" id="body1">
-    <div class="row" id="logo-foto">
-        <a href="{{ path('onas') }}"><img src='{{ asset('images/img_03.jpg') }}'></a>
-    </div>
+
     <div class="row" id="menubody">
         {% block menu %}
             {% include (':default:menu.html.twig') %}
         {% endblock %}
         <div class="col-md-8" id="glowne-zdjecie">
-        <div class="row">
-            <img src='{{ asset('images/img_07.jpg') }}' class="img-thumbnail">
+            <div class="row">
+                <img src='{{ asset('images/img_07.jpg') }}' class="img-thumbnail">
+            </div>
         </div>
+        <div class="col-md-8">
+            {% block bodyblock %}{% endblock %}
         </div>
-        {% block bodyblock %}{% endblock %}
     </div>
 </div>
 <div class="row">
     <footer class="footer" id="footer">
         <div>
-            <h6>Copyright &copy; 2011-2017 <a href="{{ path('onas') }}">montujemymeble.pl</a> All rights reserved.</h6>
+            <h6>Copyright &copy; 2011-2017 <a href="{{ path('onas') }}">montujemymeble.pl</a> All rights
+                reserved.</h6>
         </div>
     </footer>
 </div>
