@@ -3,13 +3,13 @@
 /*********************************************************************************/
 
 #body {
-    background-image: url("../images/background_01.jpg");
+    background-image: url("../images/background_01.jpg"), url("../images/background_00.jpg");
+    background-repeat: repeat-x, repeat;
 }
 
 #body1 {
     background-color: #FFF;
     max-width: 910px;
-    min-width: auto;
 }
 
 #menubody {
@@ -112,7 +112,6 @@
 #logo-foto {
     text-align: center;
     margin-top: -40px;
-    min-width: auto;
 }
 
 #glowne-zdjecie {
