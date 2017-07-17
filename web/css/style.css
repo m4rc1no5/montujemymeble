@@ -24,6 +24,7 @@
     margin-right: 15px;
     margin-left: -5px;
     padding-top: 15px;
+    margin-bottom: 20px;
 }
 
 #bodyblock2 {
@@ -110,8 +111,8 @@
 /*********************************************************************************/
 
 #logo-foto {
-    text-align: center;
-    margin-top: -40px;
+    text-align: left;
+    margin-top: -10px;
     max-width: 910px;
 }
 
