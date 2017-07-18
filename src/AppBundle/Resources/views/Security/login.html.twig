@@ -1,0 +1,30 @@
+{% extends ':default:montujemymeble.html.twig' %}
+{% block bodyblock %}
+    <div class="row" id="bodyblock">
+        <h2>Logowanie</h2>
+        {% if error %}
+            <div id="blad">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+        <div id="formularz">
+            <form action="{{ path('login') }}" method="post">
+                <div>
+                    <label>Nazwa</label>
+                </div>
+                <div>
+                    <input class="form-control" type="text" id="username" name="_username"/>
+                </div>
+                <div>
+                    <label>Hasło</label>
+                </div>
+                <div>
+                    <input class="form-control" type="password" id="password" name="_password"/>
+                </div>
+                <div id="przycisk">
+                    <button class="btn btn-default" type="submit">Zaloguj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
