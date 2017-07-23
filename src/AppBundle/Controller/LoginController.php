@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class LoginController extends Controller
 {
     /**
-     * @Route("/admin", name="admin")
+     * @Route("/panel", name="panel")
      * @Template()
      */
     public function zalogowanyAction()

@@ -31,13 +31,13 @@ security:
         default:
             anonymous: ~
             form_login:
-                login_path: /login
-                check_path: /login
-                default_target_path: /admin
+                login_path: /MM-panel
+                check_path: /MM-panel
+                default_target_path: /panel
             logout:
                 path: /logout
-                target: /login
+                target: /MM-panel
 
     access_control:
             # require ROLE_ADMIN for /admin*
-            - { path: ^/admin, roles: ROLE_ADMIN }
+            - { path: ^/panel, roles: ROLE_ADMIN }
