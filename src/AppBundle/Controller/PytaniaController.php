@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,7 +30,7 @@ class PytaniaController extends Controller
         $form = $this->createFormBuilder($pytania)
             ->add('imie', TextType::class)
             ->add('email', TextType::class)
-            ->add('telefon', IntegerType::class)
+            ->add('telefon', NumberType::class)
             ->add('temat', TextType::class)
             ->add('wiadomosc', TextareaType::class)
             ->getForm();
