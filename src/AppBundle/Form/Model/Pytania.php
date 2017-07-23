@@ -36,12 +36,12 @@ class Pytania
 
     /**
      * @var integer
-     * @Assert\NotBlank(message="Pole musi zawierać jedynie cyfry.")
+     * @Assert\NotBlank(message="Pole musi zawierać numer telefonu w formacie xxxyyyzzz.")
      * @Assert\Length(
-     *     min="6",
-     *     minMessage="Pole nie może mieć mniej niż 6 znaków.",
-     *     max="50",
-     *     maxMessage="Pole nie może mieć więcej niż 50 znaków."
+     *     min="9",
+     *     minMessage="Pole nie może mieć mniej niż 9 znaków.",
+     *     max="20",
+     *     maxMessage="Pole nie może mieć więcej niż 20 znaków."
      * )
      */
     private $telefon;
