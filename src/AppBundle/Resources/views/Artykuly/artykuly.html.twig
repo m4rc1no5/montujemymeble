@@ -2,33 +2,60 @@
 {% block bodyblock %}
     {{ tinymce_init() }}
     <div class="row" id="bodyblock">
-    <h2>Dadawanie artykułu</h2>
-    <div>
-        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-        <div id="formularz">
+        <h2>Dadawanie artykułu</h2>
+        <div>
+            {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
             <div>
-                <label>O nas</label>
+                <div>
+                    <label>O nas</label>
+                </div>
+                <div>
+                    {{ form_widget(form.onas, {'attr': {'class': 'form-control tinymce'}}) }}
+                </div>
+                <div>
+                    {{ form_errors(form.onas) }}
+                </div>
+                <div id="przycisk">
+                    <button class="btn btn-default" type="submit">Zapisz</button>
+                </div>
+                <div>
+                    <label>Oferta</label>
+                </div>
+                <div>
+                    {{ form_widget(form.oferta, {'attr': {'class': 'form-control tinymce'}}) }}
+                </div>
+                <div>
+                    {{ form_errors(form.oferta) }}
+                </div>
+                <div id="przycisk">
+                    <button class="btn btn-default" type="submit">Zapisz</button>
+                </div>
+                <div>
+                    <label>Linki</label>
+                </div>
+                <div>
+                    {{ form_widget(form.linki, {'attr': {'class': 'form-control tinymce'}}) }}
+                </div>
+                <div>
+                    {{ form_errors(form.linki) }}
+                </div>
+                <div id="przycisk">
+                    <button class="btn btn-default" type="submit">Zapisz</button>
+                </div>
+                <div>
+                    <label>Kontakt</label>
+                </div>
+                <div>
+                    {{ form_widget(form.kontakt, {'attr': {'class': 'form-control tinymce'}}) }}
+                </div>
+                <div>
+                    {{ form_errors(form.kontakt) }}
+                </div>
+                <div id="przycisk">
+                    <button class="btn btn-default" type="submit">Zapisz</button>
+                </div>
             </div>
-            <div>
-                {{ form_widget(form.onas, {'attr': {'class': 'form-control tinymce'}}) }}
-            </div>
-            <div id="blad">
-                {{ form_errors(form.onas) }}
-            </div>
-            <div>
-                <label>Oferta</label>
-            </div>
-            <div>
-                {{ form_widget(form.oferta, {'attr': {'class': 'form-control tinymce'}}) }}
-            </div>
-            <div id="blad">
-                {{ form_errors(form.oferta) }}
-            </div>
+            {{ form_end(form) }}
         </div>
-        <div id="przycisk">
-            <button class="btn btn-default" type="submit">Zapisz</button>
-        </div>
-        {{ form_end(form) }}
     </div>
-</div>
 {% endblock %}

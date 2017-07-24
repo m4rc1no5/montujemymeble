@@ -20,16 +20,8 @@ class ArtykulyController extends Controller
 
         $form = $this->createForm(ArtykulType::class, $artykul);
 
-//        $form->handleRequest($request);
-
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $this->artykulRepository->save($artykul);
-//            return $this->redirectToRoute('artykuly');
-//        }
-
         return [
             'form' => $form->createView(),
-//            'isValid' => $form->isValid(),
             'artykul' => $artykul,
         ];
     }

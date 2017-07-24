@@ -12,8 +12,11 @@ class ArtykulType extends AbstractType
     {
         $builder
             ->add('id', HiddenType::class)
+            ->add('createat', HiddenType::class)
             ->add('onas', TextareaType::class)
             ->add('oferta', TextareaType::class)
+            ->add('linki', TextareaType::class)
+            ->add('kontakt', TextareaType::class)
         ;
     }
 }
