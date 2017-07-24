@@ -1,33 +1,41 @@
 <?php
-namespace AppBundle\Form\Model;
 
-use Symfony\Component\Validator\Constraints as Assert;
+namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="artykul")
+ */
 class Artykul
 {
-    private $id;
-
-    private $createat;
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=4098)
      */
-    private $onas;
+    protected $onas;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=4098)
      */
-    private $oferta;
+    protected $oferta;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=512)
      */
-    private $linki;
+    protected $linki;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=256)
      */
-    private $kontakt;
+    protected $kontakt;
 
     /**
      * @return mixed
@@ -48,29 +56,13 @@ class Artykul
     /**
      * @return mixed
      */
-    public function getCreateat()
-    {
-        return $this->createat;
-    }
-
-    /**
-     * @param mixed $createat
-     */
-    public function setCreateat($createat)
-    {
-        $this->createat = $createat;
-    }
-
-    /**
-     * @return string
-     */
     public function getOnas()
     {
         return $this->onas;
     }
 
     /**
-     * @param string $onas
+     * @param mixed $onas
      */
     public function setOnas($onas)
     {
@@ -78,7 +70,7 @@ class Artykul
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getOferta()
     {
@@ -86,7 +78,7 @@ class Artykul
     }
 
     /**
-     * @param string $oferta
+     * @param mixed $oferta
      */
     public function setOferta($oferta)
     {
@@ -94,7 +86,7 @@ class Artykul
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getLinki()
     {
@@ -102,7 +94,7 @@ class Artykul
     }
 
     /**
-     * @param string $linki
+     * @param mixed $linki
      */
     public function setLinki($linki)
     {
@@ -110,7 +102,7 @@ class Artykul
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getKontakt()
     {
@@ -118,7 +110,7 @@ class Artykul
     }
 
     /**
-     * @param string $kontakt
+     * @param mixed $kontakt
      */
     public function setKontakt($kontakt)
     {
