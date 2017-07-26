@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ONasController extends Controller
 {
     /**
+     * @return array
      * @Route("/", name="onas")
      * @Template()
      */
