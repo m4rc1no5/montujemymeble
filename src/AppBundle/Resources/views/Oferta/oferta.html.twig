@@ -5,40 +5,8 @@
         <h3>Oferta</h3>
     </div>
     <div class="row" id="bodyblock">
-        <div id="bodyblock2">
-            Profesjonalny montaż mebli przez ekipę pracującą od kilku lat dla klientów IKEA na terenie Trójmiasta
-            (Gdańsk, Sopot, Gdynia) i okolic.
-        </div>
-        <div id="bodyblock2">
-            Kuchnie z indywidualnym projektem.
-        </div>
-        <div id="bodyblock2">
-            Zabudowa wnęk, wysokiej jakości szafy i garderoby - projektowanie i montaż.
-        </div>
-        <div id="bodyblock2">
-            10% tańszy montaż niż bezpośrednio w IKEA przy zamówieniu przez telefon 505 520 012.
-        </div>
-        <div id="bodyblock2">
-            Pomiar, doradztwo, pomoc w zakupach, transport.
-        </div>
-        <div id="bodyblock2">
-            Prace niewykonywane przez inne ekipy np. łączenie blatów bez widocznego połączenia, przeróbki szafek i
-            frontów.
-        </div>
-        <div id="bodyblock2">
-            W razie potrzeby przeróbki instalacji wodnej i elektrycznej, uprawnienia potrzebne do gwarancji AGD.
-        </div>
-        <div id="bodyblock2">
-            Kuchnie nietypowe, zdjęcia wykonanych kuchni.
-        </div>
-        <div id="bodyblock2">
-            Różnego rodzaju promocje, raty 0%.
-        </div>
-        <div id="bodyblock2">
-            Już teraz zachęcam do zadawania pytań przy pomocy zakładki <a href="{{ path('pytania') }}">Pytania.</a>
-        </div>
-        <div id="bodyblock2">
-            W sprawie pomiarów i montażu zapraszam do działu <a href="{{ path('kontakt') }}">Kontakt.</a>
+        <div>
+            {{ artykul.oferta|raw }}
         </div>
     </div>
 {% endblock %}
