@@ -1,8 +1,6 @@
 <?php
 namespace AppBundle\Form\Model;
 
-use Symfony\Component\Validator\Constraints as Assert;
-
 class Artykul
 {
     private $id;
@@ -12,22 +10,12 @@ class Artykul
     /**
      * @var string
      */
-    private $onas;
+    private $artykul;
 
     /**
      * @var string
      */
-    private $oferta;
-
-    /**
-     * @var string
-     */
-    private $linki;
-
-    /**
-     * @var string
-     */
-    private $kontakt;
+    private $tresc;
 
     /**
      * @return mixed
@@ -64,64 +52,32 @@ class Artykul
     /**
      * @return string
      */
-    public function getOnas()
+    public function getArtykul()
     {
-        return $this->onas;
+        return $this->artykul;
     }
 
     /**
-     * @param string $onas
+     * @param string $artykul
      */
-    public function setOnas($onas)
+    public function setArtykul($artykul)
     {
-        $this->onas = $onas;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOferta()
-    {
-        return $this->oferta;
-    }
-
-    /**
-     * @param string $oferta
-     */
-    public function setOferta($oferta)
-    {
-        $this->oferta = $oferta;
+        $this->artykul = $artykul;
     }
 
     /**
      * @return string
      */
-    public function getLinki()
+    public function getTresc()
     {
-        return $this->linki;
+        return $this->tresc;
     }
 
     /**
-     * @param string $linki
+     * @param string $tresc
      */
-    public function setLinki($linki)
+    public function setTresc($tresc)
     {
-        $this->linki = $linki;
-    }
-
-    /**
-     * @return string
-     */
-    public function getKontakt()
-    {
-        return $this->kontakt;
-    }
-
-    /**
-     * @param string $kontakt
-     */
-    public function setKontakt($kontakt)
-    {
-        $this->kontakt = $kontakt;
+        $this->tresc = $tresc;
     }
 }

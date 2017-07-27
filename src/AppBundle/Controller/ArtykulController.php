@@ -26,10 +26,8 @@ class ArtykulController extends Controller
         $form = $this->createFormBuilder($artykul)
             ->add('id', HiddenType::class)
             ->add('createat', HiddenType::class)
-            ->add('onas', TextareaType::class)
-            ->add('oferta', TextareaType::class)
-            ->add('linki', TextareaType::class)
-            ->add('kontakt', TextareaType::class)
+            ->add('artykul', TextareaType::class)
+            ->add('tresc', TextareaType::class)
             ->getForm();
 
         $form->handleRequest($request);
@@ -38,10 +36,8 @@ class ArtykulController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             $artykulBaza = new ArtykulBaza();
-            $artykulBaza->setOnas($artykul->getOnas());
-            $artykulBaza->setOferta($artykul->getOferta());
-            $artykulBaza->setLinki($artykul->getLinki());
-            $artykulBaza->setKontakt($artykul->getKontakt());
+            $artykulBaza->setArtykul($artykul->getArtykul());
+            $artykulBaza->setTresc($artykul->getTresc());
 
             $em->persist($artykulBaza);
             $em->flush();

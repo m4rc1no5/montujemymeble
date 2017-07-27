@@ -7,40 +7,22 @@
             {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
             <div>
                 <div>
-                    <label>O nas</label>
+                    <label>Artykuł</label>
                 </div>
                 <div>
-                    {{ form_widget(form.onas, {'attr': {'class': 'form-control tinymce'}}) }}
+                    {{ form_widget(form.artykul, {'attr': {'class': 'form-control tinymce'}}) }}
                 </div>
                 <div>
-                    {{ form_errors(form.onas) }}
+                    {{ form_errors(form.artykul) }}
                 </div>
                 <div>
-                    <label>Oferta</label>
+                    <label>Treść</label>
                 </div>
                 <div>
-                    {{ form_widget(form.oferta, {'attr': {'class': 'form-control tinymce'}}) }}
+                    {{ form_widget(form.tresc, {'attr': {'class': 'form-control tinymce'}}) }}
                 </div>
                 <div>
-                    {{ form_errors(form.oferta) }}
-                </div>
-                <div>
-                    <label>Linki</label>
-                </div>
-                <div>
-                    {{ form_widget(form.linki, {'attr': {'class': 'form-control tinymce'}}) }}
-                </div>
-                <div>
-                    {{ form_errors(form.linki) }}
-                </div>
-                <div>
-                    <label>Kontakt</label>
-                </div>
-                <div>
-                    {{ form_widget(form.kontakt, {'attr': {'class': 'form-control tinymce'}}) }}
-                </div>
-                <div>
-                    {{ form_errors(form.kontakt) }}
+                    {{ form_errors(form.tresc) }}
                 </div>
             </div>
             <div id="przycisk">

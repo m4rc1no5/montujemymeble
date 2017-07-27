@@ -18,24 +18,14 @@ class Artykul
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=4098)
+     * @ORM\Column(type="string", length=64)
      */
-    protected $onas;
+    protected $artykul;
 
     /**
      * @ORM\Column(type="string", length=4098)
      */
-    protected $oferta;
-
-    /**
-     * @ORM\Column(type="string", length=512)
-     */
-    protected $linki;
-
-    /**
-     * @ORM\Column(type="string", length=256)
-     */
-    protected $kontakt;
+    protected $tresc;
 
     /**
      * @return mixed
@@ -56,64 +46,32 @@ class Artykul
     /**
      * @return mixed
      */
-    public function getOnas()
+    public function getArtykul()
     {
-        return $this->onas;
+        return $this->artykul;
     }
 
     /**
-     * @param mixed $onas
+     * @param mixed $artykul
      */
-    public function setOnas($onas)
+    public function setArtykul($artykul)
     {
-        $this->onas = $onas;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getOferta()
-    {
-        return $this->oferta;
-    }
-
-    /**
-     * @param mixed $oferta
-     */
-    public function setOferta($oferta)
-    {
-        $this->oferta = $oferta;
+        $this->artykul = $artykul;
     }
 
     /**
      * @return mixed
      */
-    public function getLinki()
+    public function getTresc()
     {
-        return $this->linki;
+        return $this->tresc;
     }
 
     /**
-     * @param mixed $linki
+     * @param mixed $tresc
      */
-    public function setLinki($linki)
+    public function setTresc($tresc)
     {
-        $this->linki = $linki;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getKontakt()
-    {
-        return $this->kontakt;
-    }
-
-    /**
-     * @param mixed $kontakt
-     */
-    public function setKontakt($kontakt)
-    {
-        $this->kontakt = $kontakt;
+        $this->tresc = $tresc;
     }
 }
