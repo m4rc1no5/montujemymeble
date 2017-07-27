@@ -25,4 +25,11 @@ abstract class ArtykulRepository extends DoctrineRepository
         $em->persist($artykulBaza);
         $em->flush();
     }
+
+    public function getOneById($id)
+    {
+        return $this->getEntityManager()
+            ->getRepository('AppBundle:Artykul')
+            ->find($id);
+    }
 }
