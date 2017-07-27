@@ -4,3 +4,10 @@ parameters:
     #parameter_name: value
 
 services:
+    app.artykul_repository:
+        class: AppBundle\Repository\Doctrine\ArtykulRepository
+        arguments: ['@doctrine.orm.entity_manager']
+
+    app.onas_controller:
+        class: AppBundle\Controller\ONasController
+        arguments: ['@app.artykul_repository']
