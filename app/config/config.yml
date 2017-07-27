@@ -38,8 +38,6 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-    globals:
-        zdjecia_przepisow: 'uploads/zdjecia_przepisow/'
 
 # Doctrine Configuration
 doctrine:

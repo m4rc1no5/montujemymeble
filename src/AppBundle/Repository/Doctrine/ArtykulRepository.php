@@ -2,16 +2,27 @@
 
 namespace AppBundle\Repository\Doctrine;
 
+use AppBundle\Form\Model\Artykul;
+
 abstract class ArtykulRepository extends DoctrineRepository
 {
-    public function getLast($maxResults)
+    public function getAllOrderByName()
     {
         return $this->getEntityManager()
             ->getRepository('AppBundle:Artykul')
-            ->createQueryBuilder('p')
-            ->orderBy('p.id', 'DESC')
-            ->setMaxResults($maxResults)
-            ->getQuery()
-            ->getResult();
+            ->findBy([], ['artykul' => 'ASC']);
+    }
+
+    public function update(Artykul $artykul)
+    {
+        $em = $this->getEntityManager();
+
+        $artykulBaza = $this ->find($artykul->getId());
+
+        $artykulBaza->setArtykul($artykul->getArtykul());
+        $artykulBaza->setTresc($artykul->getTresc());
+
+        $em->persist($artykulBaza);
+        $em->flush();
     }
 }
