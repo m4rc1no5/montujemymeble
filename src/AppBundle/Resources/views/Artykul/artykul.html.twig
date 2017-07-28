@@ -2,7 +2,7 @@
 {% block panelblock %}
     {{ tinymce_init() }}
     <div class="row" id="bodyblock">
-        <h2>Dadawanie artykułu</h2>
+        <h2>Artykuły</h2>
         {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
         <div>
             <div>
@@ -31,7 +31,7 @@
         </div>
         {{ form_end(form) }}
 
-        <div class="row">
+        <div>
             <table class="table">
                 <tr>
                     <th>Id</th>
@@ -39,14 +39,14 @@
                     <th>Treść</th>
                     <th>Edycja</th>
                 </tr>
-                {% for artykul in artykul %}
+                {% for artykuly in artykuly %}
                     <tr>
-                        <td>{{ kategoria.id }}</td>
-                        <td>{{ kategoria.temat }}</td>
-                        <td>{{ kategoria.tresc }}</td>
+                        <td>{{ artykuly.id }}</td>
+                        <td>{{ artykuly.temat }}</td>
+                        <td>{{ artykuly.tresc }}</td>
                         <td>
                             <form method="post" action="{{ path('artykul') }}">
-                                <input type="hidden" name="id" value="{{ kategoria.id }}">
+                                <input type="hidden" name="id" value="{{ artykuly.id }}">
                                 <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
                             </form>
                         </td>
