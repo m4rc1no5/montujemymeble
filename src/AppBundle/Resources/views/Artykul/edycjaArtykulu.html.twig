@@ -1,0 +1,27 @@
+{% extends ':default:panelAdministracyjny.html.twig' %}
+{% block panelblock %}
+    {{ tinymce_init() }}
+    <div class="row" id="bodyblock">
+        <div>
+            <h2>Edycja artykułu</h2>
+        </div>
+        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+        <div>
+            <div>
+                <div>
+                    <H3>{{ artykul.temat|upper }}</H3>
+                </div>
+                <div>
+                    {{ form_widget(form.tresc, {'attr': {'class': 'form-control tinymce'}}) }}
+                </div>
+                <div id="blad">
+                    {{ form_errors(form.tresc) }}
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-default" type="submit">Zapisz</button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

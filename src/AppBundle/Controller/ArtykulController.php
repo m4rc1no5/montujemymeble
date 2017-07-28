@@ -27,7 +27,7 @@ class ArtykulController extends Controller
     }
 
     /**
-     * @Route("/panel/artykul", name="artykul")
+     * @Route("/panel/artykul/edycja", name="edycja")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
@@ -62,10 +62,26 @@ class ArtykulController extends Controller
             ->getRepository('AppBundle:Artykul')
             ->findAll();
 
-        return $this->render('AppBundle:Artykul:artykul.html.twig', [
+        return $this->render('AppBundle:Artykul:edycjaArtykulu.html.twig', [
             'form' => $form->createView(),
             'isValid' => $form->isValid(),
             'artykul' => $artykul,
+            'dane' => $dane,
+        ]);
+    }
+
+    /**
+     * @Route("/panel/artykul", name="artykul")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function artykulAction(Request $request)
+    {
+        $dane = $this->getDoctrine()
+            ->getRepository('AppBundle:Artykul')
+            ->findAll();
+
+        return $this->render('AppBundle:Artykul:artykul.html.twig', [
             'dane' => $dane,
             'artykuly' => $this->artykulRepository->getAllOrderByName(),
         ]);

@@ -10,7 +10,7 @@ class ArtykulRepository extends DoctrineRepository
     {
         return $this->getEntityManager()
             ->getRepository('AppBundle:Artykul')
-            ->findBy([], ['temat' => 'ASC']);
+            ->findBy([], ['id' => 'ASC']);
     }
 
     public function update(Artykul $artykul)

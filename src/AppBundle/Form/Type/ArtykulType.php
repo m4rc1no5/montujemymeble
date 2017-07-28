@@ -14,7 +14,7 @@ class ArtykulType extends AbstractType
         $builder
             ->add('id', HiddenType::class)
             ->add('createat', HiddenType::class)
-            ->add('temat', TextareaType::class)
+            ->add('temat', HiddenType::class)
             ->add('tresc', TextareaType::class);
     }
 }

@@ -1,12 +1,14 @@
 {% extends ':default:panelAdministracyjny.html.twig' %}
 {% block panelblock %}
     <div class="row" id="bodyblock">
-        <h2>Logowanie</h2>
-        {% if error %}
-            <div id="blad">
-                {{ error.messageKey|trans(error.messageData, 'security') }}
-            </div>
-        {% endif %}
+        <div>
+            <h2>Logowanie</h2>
+            {% if error %}
+                <div id="blad">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+        </div>
         <div id="formularz">
             <form action="{{ path('logowanie') }}" method="post">
                 <div>

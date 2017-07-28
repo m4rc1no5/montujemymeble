@@ -1,36 +1,9 @@
 {% extends ':default:panelAdministracyjny.html.twig' %}
 {% block panelblock %}
-    {{ tinymce_init() }}
     <div class="row" id="bodyblock">
-        <h2>Artykuły</h2>
-        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
         <div>
-            <div>
-                <div>
-                    <label>Temat</label>
-                </div>
-                <div>
-                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.temat) }}
-                </div>
-                <div>
-                    <label>Treść</label>
-                </div>
-                <div>
-                    {{ form_widget(form.tresc, {'attr': {'class': 'form-control'}}) }}
-                </div>
-                <div id="blad">
-                    {{ form_errors(form.tresc) }}
-                </div>
-            </div>
-            <div>
-                <button class="btn btn-default" type="submit">Zapisz</button>
-            </div>
+            <h2>Artykuły</h2>
         </div>
-        {{ form_end(form) }}
-
         <div>
             <table class="table">
                 <tr>
@@ -45,7 +18,7 @@
                         <td>{{ artykuly.temat }}</td>
                         <td>{{ artykuly.tresc }}</td>
                         <td>
-                            <form method="post" action="{{ path('artykul') }}">
+                            <form method="post" action="{{ path('edycja') }}">
                                 <input type="hidden" name="id" value="{{ artykuly.id }}">
                                 <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
                             </form>
