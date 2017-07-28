@@ -4,7 +4,7 @@ namespace AppBundle\Repository\Doctrine;
 
 use AppBundle\Form\Model\Artykul;
 
-abstract class ArtykulRepository extends DoctrineRepository
+class ArtykulRepository extends DoctrineRepository
 {
     public function getAllOrderByName()
     {
@@ -17,12 +17,17 @@ abstract class ArtykulRepository extends DoctrineRepository
     {
         $em = $this->getEntityManager();
 
-        $artykulBaza = $this ->find($artykul->getId());
+        $artykulBaza = $this->find($artykul->getId());
 
         $artykulBaza->setArtykul($artykul->getArtykul());
         $artykulBaza->setTresc($artykul->getTresc());
 
         $em->persist($artykulBaza);
         $em->flush();
+    }
+
+    protected function getEntityClassName()
+    {
+        return 'AppBundle:Artykul';
     }
 }

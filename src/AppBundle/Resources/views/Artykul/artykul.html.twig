@@ -3,8 +3,32 @@
     {{ tinymce_init() }}
     <div class="row" id="bodyblock">
         <h2>Dadawanie artykułu</h2>
-        <div>
-            artykul
-        </div>
+        {#{{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}#}
+        {#<div>#}
+            {#<div>#}
+                {#<div>#}
+                    {#<label>Tytuł</label>#}
+                {#</div>#}
+                {#<div>#}
+                    {#{{ form_widget(form.tytul, {'attr': {'class': 'form-control'}}) }}#}
+                {#</div>#}
+                {#<div id="blad">#}
+                    {#{{ form_errors(form.tytul) }}#}
+                {#</div>#}
+                {#<div>#}
+                    {#<label>Treść</label>#}
+                {#</div>#}
+                {#<div>#}
+                    {#{{ form_widget(form.tresc, {'attr': {'class': 'form-control'}}) }}#}
+                {#</div>#}
+                {#<div id="blad">#}
+                    {#{{ form_errors(form.tresc) }}#}
+                {#</div>#}
+            {#</div>#}
+            {#<div>#}
+                {#<button class="btn btn-default" type="submit">Zapisz</button>#}
+            {#</div>#}
+        {#</div>#}
+        {#{{ form_end(form) }}#}
     </div>
 {% endblock %}
