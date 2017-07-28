@@ -10,7 +10,7 @@ class ArtykulRepository extends DoctrineRepository
     {
         return $this->getEntityManager()
             ->getRepository('AppBundle:Artykul')
-            ->findBy([], ['artykul' => 'ASC']);
+            ->findBy([], ['temat' => 'ASC']);
     }
 
     public function update(Artykul $artykul)
@@ -19,7 +19,7 @@ class ArtykulRepository extends DoctrineRepository
 
         $artykulBaza = $this->find($artykul->getId());
 
-        $artykulBaza->setArtykul($artykul->getArtykul());
+        $artykulBaza->setTemat($artykul->getTemat());
         $artykulBaza->setTresc($artykul->getTresc());
 
         $em->persist($artykulBaza);

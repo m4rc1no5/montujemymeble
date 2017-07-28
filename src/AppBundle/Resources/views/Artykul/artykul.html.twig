@@ -3,32 +3,56 @@
     {{ tinymce_init() }}
     <div class="row" id="bodyblock">
         <h2>Dadawanie artykułu</h2>
-        {#{{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}#}
-        {#<div>#}
-            {#<div>#}
-                {#<div>#}
-                    {#<label>Tytuł</label>#}
-                {#</div>#}
-                {#<div>#}
-                    {#{{ form_widget(form.tytul, {'attr': {'class': 'form-control'}}) }}#}
-                {#</div>#}
-                {#<div id="blad">#}
-                    {#{{ form_errors(form.tytul) }}#}
-                {#</div>#}
-                {#<div>#}
-                    {#<label>Treść</label>#}
-                {#</div>#}
-                {#<div>#}
-                    {#{{ form_widget(form.tresc, {'attr': {'class': 'form-control'}}) }}#}
-                {#</div>#}
-                {#<div id="blad">#}
-                    {#{{ form_errors(form.tresc) }}#}
-                {#</div>#}
-            {#</div>#}
-            {#<div>#}
-                {#<button class="btn btn-default" type="submit">Zapisz</button>#}
-            {#</div>#}
-        {#</div>#}
-        {#{{ form_end(form) }}#}
+        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+        <div>
+            <div>
+                <div>
+                    <label>Temat</label>
+                </div>
+                <div>
+                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div id="blad">
+                    {{ form_errors(form.temat) }}
+                </div>
+                <div>
+                    <label>Treść</label>
+                </div>
+                <div>
+                    {{ form_widget(form.tresc, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div id="blad">
+                    {{ form_errors(form.tresc) }}
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-default" type="submit">Zapisz</button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+
+        <div class="row">
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Temat</th>
+                    <th>Treść</th>
+                    <th>Edycja</th>
+                </tr>
+                {% for artykul in artykul %}
+                    <tr>
+                        <td>{{ kategoria.id }}</td>
+                        <td>{{ kategoria.temat }}</td>
+                        <td>{{ kategoria.tresc }}</td>
+                        <td>
+                            <form method="post" action="{{ path('artykul') }}">
+                                <input type="hidden" name="id" value="{{ kategoria.id }}">
+                                <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
     </div>
 {% endblock %}

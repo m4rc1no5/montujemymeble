@@ -10,7 +10,7 @@ class Artykul
     /**
      * @var string
      */
-    private $artykul;
+    private $temat;
 
     /**
      * @var string
@@ -52,17 +52,17 @@ class Artykul
     /**
      * @return string
      */
-    public function getArtykul()
+    public function getTemat()
     {
-        return $this->artykul;
+        return $this->temat;
     }
 
     /**
-     * @param string $artykul
+     * @param string $temat
      */
-    public function setArtykul($artykul)
+    public function setTemat($temat)
     {
-        $this->artykul = $artykul;
+        $this->temat = $temat;
     }
 
     /**

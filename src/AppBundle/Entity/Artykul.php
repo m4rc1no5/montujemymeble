@@ -20,10 +20,10 @@ class Artykul
     /**
      * @ORM\Column(type="string", length=64)
      */
-    protected $artykul;
+    protected $temat;
 
     /**
-     * @ORM\Column(type="string", length=4098)
+     * @ORM\Column(type="text")
      */
     protected $tresc;
 
@@ -46,17 +46,17 @@ class Artykul
     /**
      * @return mixed
      */
-    public function getArtykul()
+    public function getTemat()
     {
-        return $this->artykul;
+        return $this->temat;
     }
 
     /**
-     * @param mixed $artykul
+     * @param mixed $temat
      */
-    public function setArtykul($artykul)
+    public function setTemat($temat)
     {
-        $this->artykul = $artykul;
+        $this->temat = $temat;
     }
 
     /**

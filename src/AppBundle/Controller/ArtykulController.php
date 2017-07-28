@@ -33,103 +33,41 @@ class ArtykulController extends Controller
      */
     public function editAction(Request $request)
     {
-//        $id = $request->get('id');
-//        $artykul = new Artykul();
-//
-//        if (isset($id)) {
-//            /** @var ArtykulEntity $artykulBaza */
-//            $artykulBaza = $this->getDoctrine()
-//                ->getRepository('AppBundle:Artykul')
-//                ->find($id);
-//
-//            $artykul->setId($artykulBaza->getId());
-//            $artykul->setArtykul($artykulBaza->getArtykul());
-//            $artykul->setTresc($artykulBaza->getTresc());
-//        }
-//
-//        $form = $this->createForm(ArtykulType::class, $artykul);
-//
-//        $form->handleRequest($request);
-//
-//        if ($form->isSubmitted() && $form->isValid()) {
-//
-//            $this->artykulRepository->update($artykul);
-//
-//            return $this->redirectToRoute('artykul');
-//        }
-//
-//        $dane = $this->getDoctrine()
-//            ->getRepository('AppBundle:Artykul')
-//            ->findAll();
+        $id = $request->get('id');
+        $artykul = new Artykul();
 
-        return $this->render('@App/Artykul/artykul.html.twig', [
-//            'form' => $form->createView(),
-//            'isValid' => $form->isValid(),
-//            'artykul' => $artykul,
-//            'dane' => $dane,
-//            'artykuly' => $this->artykulRepository->getAllOrderByName(),
+        if (isset($id)) {
+            /** @var ArtykulEntity $artykulBaza */
+            $artykulBaza = $this->getDoctrine()
+                ->getRepository('AppBundle:Artykul')
+                ->find($id);
+
+            $artykul->setId($artykulBaza->getId());
+            $artykul->setTemat($artykulBaza->getTemat());
+            $artykul->setTresc($artykulBaza->getTresc());
+        }
+
+        $form = $this->createForm(ArtykulType::class, $artykul);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $this->artykulRepository->update($artykul);
+
+            return $this->redirectToRoute('artykul');
+        }
+
+        $dane = $this->getDoctrine()
+            ->getRepository('AppBundle:Artykul')
+            ->findAll();
+
+        return $this->render('AppBundle:Artykul:artykul.html.twig', [
+            'form' => $form->createView(),
+            'isValid' => $form->isValid(),
+            'artykul' => $artykul,
+            'dane' => $dane,
+            'artykuly' => $this->artykulRepository->getAllOrderByName(),
         ]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    /**
-//     * @Route("/panel/artykul", name="artykul")
-//     * @Template()
-//     * @param Request $request
-//     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
-//     */
-//    public function artykulAction(Request $request)
-//    {
-//        $artykul = new Artykul();
-//
-//        $form = $this->createFormBuilder($artykul)
-//            ->add('id', HiddenType::class)
-//            ->add('createat', HiddenType::class)
-//            ->add('artykul', TextareaType::class)
-//            ->add('tresc', TextareaType::class)
-//            ->getForm();
-//
-//        $form->handleRequest($request);
-//
-//        if ($form->isValid()) {
-//            $em = $this->getDoctrine()->getManager();
-//
-//            $artykulBaza = new ArtykulBaza();
-//            $artykulBaza->setArtykul($artykul->getArtykul());
-//            $artykulBaza->setTresc($artykul->getTresc());
-//
-//            $em->persist($artykulBaza);
-//            $em->flush();
-//
-//            return $this->redirectToRoute('artykul');
-//        }
-//
-//        return array(
-//            'form' => $form->createView(),
-//        );
-//    }
 }
-
