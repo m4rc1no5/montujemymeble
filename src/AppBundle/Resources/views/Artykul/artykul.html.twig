@@ -16,7 +16,7 @@
                     <tr>
                         <td>{{ artykuly.id }}</td>
                         <td>{{ artykuly.temat }}</td>
-                        <td>{{ artykuly.tresc }}</td>
+                        <td>{{ artykuly.tresc|raw }}</td>
                         <td>
                             <form method="post" action="{{ path('edycja') }}">
                                 <input type="hidden" name="id" value="{{ artykuly.id }}">
