@@ -16,8 +16,9 @@ class GaleriaController extends Controller
     {
         $params = array(
             'api_key' => '8da87a1824d3b7ad151e789438c6ed10',
-            'method' => 'flickr.photos.getInfo',
-            'photo_id' => '36308778775',
+            'user_id' => '151280823@N06',
+            'method' => 'flickr.people.getPhotos',
+            'extras' => 'url_sq',
             'format' => 'php_serial',
         );
 
@@ -40,16 +41,16 @@ class GaleriaController extends Controller
 
         if ($rsp_obj['stat'] == 'ok') {
 
-            $photo_title = $rsp_obj['photo']['title']['_content'];
+            $photo_view = $rsp_obj['photos']['photo'];
 
-            echo "Title is $photo_title!";
+//            echo "Title is $photo_view!";
         } else {
 
             echo "Call failed!";
         }
 
         return [
-            'title' => $photo_title,
+            'view' => $photo_view,
         ];
     }
 }
