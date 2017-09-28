@@ -120,14 +120,15 @@
 }
 
 #galeria {
-    text-align: center;
+    margin: 2px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
 }
 
-#galeria iframe {
-    text-align: center;
-    width: 500px;
-    height: 340px;
-    margin-top: 15px;
+#galeria img {
+    width: 100%;
+    height: auto;
 }
 
 /*********************************************************************************/

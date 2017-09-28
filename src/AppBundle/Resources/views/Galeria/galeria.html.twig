@@ -6,7 +6,11 @@
     </div>
     <div class="row" id="bodyblock">
         {% for photo in view %}
-            <img src="{{ photo.url_sq }}">
+            <div id="galeria">
+                <a target="_blank" href="{{ photo.url_sq }}">
+                    <img src="{{ photo.url_sq }}">
+                </a>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

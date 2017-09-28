@@ -32,8 +32,6 @@ class GaleriaController extends Controller
 
         $url = "https://api.flickr.com/services/rest/?" . implode('&', $encoded_params);
 
-        echo $url;
-
         $rsp = file_get_contents($url);
 
         $rsp_obj = unserialize($rsp);
@@ -43,7 +41,6 @@ class GaleriaController extends Controller
 
             $photo_view = $rsp_obj['photos']['photo'];
 
-//            echo "Title is $photo_view!";
         } else {
 
             echo "Call failed!";
