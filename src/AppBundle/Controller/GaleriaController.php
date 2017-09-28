@@ -18,7 +18,7 @@ class GaleriaController extends Controller
             'api_key' => '8da87a1824d3b7ad151e789438c6ed10',
             'user_id' => '151280823@N06',
             'method' => 'flickr.people.getPhotos',
-            'extras' => 'url_sq',
+            'extras' => 'url_q, url_m',
             'format' => 'php_serial',
         );
 
