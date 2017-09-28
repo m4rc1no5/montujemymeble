@@ -44,23 +44,15 @@
 </div>
 <div class="container img-rounded" id="body1">
     <div class="row" id="menubody">
-        {% block menu %}
-            {% include (':default:menu.html.twig') %}
-        {% endblock %}
-        <div class="col-md-8" id="glowne-zdjecie">
-            <div class="row">
-                <img src='{{ asset('images/img_07.jpg') }}' class="img-thumbnail">
-            </div>
-        </div>
-        <div class="col-md-8">
-            {% block bodyblock %}{% endblock %}
+        <div class="col-md-12">
+            {% block panelblock %}{% endblock %}
         </div>
     </div>
 </div>
 <div class="row">
     <footer class="footer" id="footer">
         <div>
-            <h6>Copyright &copy; 2011-{{ "now"|date("Y") }} <a href="{{ path('onas') }}">montujemymeble.pl</a> All rights
+            <h6>Copyright &copy; 2011-2017 <a href="{{ path('onas') }}">montujemymeble.pl</a> All rights
                 reserved.</h6>
         </div>
     </footer>

@@ -8,7 +8,6 @@
 
 namespace AppBundle\Repository\Doctrine;
 
-
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 

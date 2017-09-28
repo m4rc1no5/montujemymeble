@@ -6,19 +6,19 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class SecurityController extends Controller
+class LogowanieController extends Controller
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/MM-panel", name="logowanie")
      */
-    public function loginAction()
+    public function logowanieAction()
     {
         $authenticationUtils = $this->get('security.authentication_utils');
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
 
-        return $this->render('@App/Security/login.html.twig', [
+        return $this->render('@App/Security/logowanie.html.twig', [
             'error' => $error,
         ]);
     }

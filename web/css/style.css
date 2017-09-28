@@ -21,9 +21,8 @@
 #bodyblock {
     font-size: 16px;
     text-align: justify;
-    margin-right: 15px;
-    margin-left: -5px;
-    padding-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 20px;
 }
 
@@ -49,8 +48,13 @@
 #naglowek {
     border-bottom: 1px inset #d2d2d2;
     margin-top: -20px;
-    margin-left: -5px;
+    margin-left: 5px;
     color: #666;
+}
+
+#tresc {
+    color: #000;
+    margin-top: 15px;
 }
 
 /*********************************************************************************/
@@ -98,15 +102,6 @@
 }
 
 /*********************************************************************************/
-/* Galeria                                                                       */
-/*********************************************************************************/
-
-.galeria {
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-/*********************************************************************************/
 /* Zdjęcia                                                                        */
 /*********************************************************************************/
 
@@ -122,6 +117,18 @@
     padding-bottom: 15px;
     text-align: center;
     max-width: 600px;
+}
+
+#galeria {
+    margin: 2px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+#galeria img {
+    width: 100%;
+    height: auto;
 }
 
 /*********************************************************************************/
