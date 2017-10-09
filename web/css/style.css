@@ -89,7 +89,7 @@
 #menu a {
     color: #666;
     font-family: Verdana, Arial, sans-serif;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 4px 10px;
 }
 
 #menu a:focus {
@@ -102,12 +102,12 @@
     background-color: transparent;
 }
 
-#menu_ikonki img {
-    width: 15%;
-}
-
 #link_ikea_brw {
     text-align: center;
+}
+
+#link_ikea_brw div {
+    margin: 10px;
 }
 
 #link_ikea :focus {
