@@ -19,7 +19,7 @@
 }
 
 #bodyblock {
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
     margin-left: -5px;
     margin-right: 0px;
@@ -78,15 +78,16 @@
 }
 
 #menu ul {
-    background-color: darkgrey;
+    background-color: #cccccc;
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 0px;
     margin-bottom: 20px;
+    border: double #ffffff;
 }
 
 #menu a {
-    color: black;
+    color: #666;
     font-family: Verdana, Arial, sans-serif;
     padding: 0px 0px 0px 10px;
 }
@@ -99,6 +100,10 @@
 #menu a:hover {
     text-decoration: none;
     background-color: transparent;
+}
+
+#menu_ikonki img {
+    width: 15%;
 }
 
 #link_ikea_brw {
@@ -187,4 +192,12 @@
 #footer a:hover {
     color: #FFF;
     text-decoration: underline;
+}
+
+/*********************************************************************************/
+/* Panel                                                                         */
+/*********************************************************************************/
+
+#panel li{
+    margin: 10px;
 }
