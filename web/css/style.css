@@ -21,7 +21,7 @@
 #bodyblock {
     font-size: 16px;
     text-align: justify;
-    margin-left: -5px;
+    margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 20px;
 }
@@ -48,7 +48,7 @@
 #naglowek {
     border-bottom: 1px inset #d2d2d2;
     margin-top: -20px;
-    margin-right: 10px;
+    margin-left: 5px;
     color: #666;
 }
 
@@ -71,17 +71,11 @@
 }
 
 #menu ul {
-    background-color: #cccccc;
-    padding-top: 10px;
-    border: 2px groove #cccccc;
-}
-
-#menu li {
-    margin-top: -10px;
+    background-color: darkgrey;
 }
 
 #menu a {
-    color: #666;
+    color: black;
     font-family: Verdana, Arial, sans-serif;
 }
 
@@ -118,9 +112,9 @@
 }
 
 #glowne-zdjecie {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     text-align: center;
     max-width: 600px;
 }
@@ -136,22 +130,6 @@
     width: 100%;
     height: auto;
 }
-
-#gallery {
-    background-color: #fff;
-    padding: 10px;
-    text-align: left;
-}
-#gallery ul { list-style: none; }
-#gallery ul li { display: inline; }
-#gallery ul img {
-    border: 1px solid grey;
-}
-#gallery ul a:hover img {
-    border: 1px solid #000;
-    color: #fff;
-}
-#gallery ul a:hover { color: #fff; }
 
 /*********************************************************************************/
 /* Formularz                                                                       */
