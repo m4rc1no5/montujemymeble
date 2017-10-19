@@ -5,13 +5,17 @@
         <div class="panel-heading">Galeria</div>
         <div class="panel-body">
             <div>
-                {% for photo in view %}
-                    <div id="galeria">
-                        <a href="{{ photo.url_o }}" data-lightbox="roadtrip" data-title="{{ photo.title }}">
-                            <img src="{{ photo.url_q }}">
-                        </a>
-                    </div>
-                {% endfor %}
+                {% if photos is null %}
+                    <div>Brak zdjęć</div>
+                {% else %}
+                    {% for photo in photos %}
+                        <div id="galeria">
+                            <a href="{{ photo.url_o }}" data-lightbox="roadtrip" data-title="{{ photo.title }}">
+                                <img src="{{ photo.url_q }}">
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

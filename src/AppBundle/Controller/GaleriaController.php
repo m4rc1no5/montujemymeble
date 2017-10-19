@@ -2,52 +2,69 @@
 
 namespace AppBundle\Controller;
 
+use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * @Route(service="app.galeria_controller")
+ */
 class GaleriaController extends Controller
 {
+    /** @var LoggerInterface */
+    private $logger;
+
+    private $params = [
+        'method' => 'flickr.people.getPhotos',
+        'extras' => 'url_q, url_m, url_o',
+        'format' => 'php_serial',
+    ];
+
+    /**
+     * GaleriaController constructor.
+     * @param LoggerInterface $logger
+     */
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
+
     /**
      * @Route("/galeria", name="galeria")
      * @Template()
+     * @return array
      */
     public function galeriaAction()
     {
-        $params = array(
-            'api_key' => '8da87a1824d3b7ad151e789438c6ed10',
-            'user_id' => '151280823@N06',
-            'method' => 'flickr.people.getPhotos',
-            'extras' => 'url_q, url_m, url_o',
-            'format' => 'php_serial',
-        );
 
-        $encoded_params = array();
 
-        foreach ($params as $k => $v) {
+        return [
+            'photos' => $this->getPhotos(),
+        ];
+    }
 
+    private function getPhotos() {
+        $encoded_params = [];
+
+        $this->params['api_key'] = $this->container->getParameter('flickr_api_key');
+        $this->params['user_id'] = $this->container->getParameter('flickr_user_id');
+
+        foreach ($this->params as $k => $v) {
             $encoded_params[] = urlencode($k) . '=' . urlencode($v);
         }
 
-
         $url = "https://api.flickr.com/services/rest/?" . implode('&', $encoded_params);
-
         $rsp = file_get_contents($url);
-
         $rsp_obj = unserialize($rsp);
 
-
         if ($rsp_obj['stat'] == 'ok') {
-
-            $photo_view = $rsp_obj['photos']['photo'];
-
-        } else {
-
-            echo "Call failed!";
+            return $rsp_obj['photos']['photo'];
         }
 
-        return [
-            'view' => $photo_view,
-        ];
+        $this->logger->alert("Nie udało się pobrać zdjęć z: " . $url);
+
+        return null;
     }
 }
