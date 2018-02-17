@@ -5,6 +5,7 @@
 #body {
     background-image: url("../images/background_01.jpg"), url("../images/background_00.jpg");
     background-repeat: repeat-x, repeat;
+    overflow-x: hidden;
 }
 
 #body1 {
