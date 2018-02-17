@@ -1,0 +1,31 @@
+{% extends ':default:panelAdministracyjny.html.twig' %}
+{% block panelblock %}
+    <div class="row" id="bodyblock">
+        <div>
+            <h2>Artykuły</h2>
+        </div>
+        <div>
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Temat</th>
+                    <th>Treść</th>
+                    <th>Edycja</th>
+                </tr>
+                {% for artykuly in artykuly %}
+                    <tr>
+                        <td>{{ artykuly.id }}</td>
+                        <td>{{ artykuly.temat }}</td>
+                        <td>{{ artykuly.tresc|raw }}</td>
+                        <td>
+                            <form method="post" action="{{ path('edycja') }}">
+                                <input type="hidden" name="id" value="{{ artykuly.id }}">
+                                <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

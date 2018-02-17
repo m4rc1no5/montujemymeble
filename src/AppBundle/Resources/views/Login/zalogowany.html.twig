@@ -1,17 +1,16 @@
-{% extends ':default:montujemymeble.html.twig' %}
-{% block bodyblock %}
+{% extends ':default:panelAdministracyjny.html.twig' %}
+{% block panelblock %}
     <div class="row" id="bodyblock">
-        <h2>Panel użytkownika</h2>
         <div>
-            <ul class="list-unstyled">
+            <h2>Panel użytkownika</h2>
+        </div>
+        <div>
+            <ul class="list-unstyled" id="panel">
                 <li>
-                    <a href="#">Artykuły</a>
+                    <a href="{{ path('artykul') }}" class="btn btn-primary">Artykuły</a>
                 </li>
                 <li>
-                    <a href="#">Zdjęcia</a>
-                </li>
-                <li>
-                    <a href="{{ path('logout') }}">Wyloguj</a>
+                    <a href="{{ path('logout') }}" class="btn btn-info">Wyloguj</a>
                 </li>
             </ul>
         </div>
