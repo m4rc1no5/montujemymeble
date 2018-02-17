@@ -19,11 +19,10 @@
 }
 
 #bodyblock {
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: 0px;
 }
 
 #bodyblock2 {
@@ -45,11 +44,19 @@
     font-size: 14px;
 }
 
+#main {
+    margin: 0px;
+}
+
 #naglowek {
     border-bottom: 1px inset #d2d2d2;
-    margin-top: -20px;
-    margin-left: 5px;
+    margin-top: -25px;
+    margin-right: -11px;
     color: #666;
+}
+
+#naglowek h3 {
+    margin-bottom: 0px;
 }
 
 #tresc {
@@ -63,7 +70,7 @@
 
 #menu {
     font-size: 14px;
-    margin-left: -5px;
+    margin-left: -6px;
 }
 
 #menu img {
@@ -71,12 +78,18 @@
 }
 
 #menu ul {
-    background-color: darkgrey;
+    background-color: #cccccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    border: double #ffffff;
 }
 
 #menu a {
     color: black;
     font-family: Verdana, Arial, sans-serif;
+    padding: 0px 0px 4px 10px;
 }
 
 #menu a:focus {
@@ -91,6 +104,10 @@
 
 #link_ikea_brw {
     text-align: center;
+}
+
+#link_ikea_brw div {
+    margin: 10px;
 }
 
 #link_ikea :focus {
@@ -112,11 +129,11 @@
 }
 
 #glowne-zdjecie {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
     text-align: center;
-    max-width: 600px;
+    max-width: 595px;
+    margin-top: -4px;
+    margin-bottom: 10px;
+    padding: 4px;
 }
 
 #galeria {
@@ -130,6 +147,22 @@
     width: 100%;
     height: auto;
 }
+
+#gallery {
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+#gallery ul { list-style: none; }
+#gallery ul li { display: inline; }
+#gallery ul img {
+    border: 1px solid grey;
+}
+#gallery ul a:hover img {
+    border: 1px solid #000;
+    color: #fff;
+}
+#gallery ul a:hover { color: #fff; }
 
 /*********************************************************************************/
 /* Formularz                                                                       */
@@ -175,4 +208,12 @@
 #footer a:hover {
     color: #FFF;
     text-decoration: underline;
+}
+
+/*********************************************************************************/
+/* Panel                                                                         */
+/*********************************************************************************/
+
+#panel li{
+    margin: 10px;
 }

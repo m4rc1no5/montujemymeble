@@ -1,16 +1,22 @@
 {% extends ':default:montujemymeble.html.twig' %}
 
 {% block bodyblock %}
-    <div class="row" id="naglowek">
-        <h3>Galeria</h3>
-    </div>
-    <div class="row" id="bodyblock">
-        {% for photo in view %}
-            <div id="galeria">
-                <a target="_blank" href="{{ photo.url_m }}">
-                    <img src="{{ photo.url_q }}">
-                </a>
+    <div class="panel panel-default">
+        <div class="panel-heading">Galeria</div>
+        <div class="panel-body">
+            <div>
+                {% if photos is null %}
+                    <div>Brak zdjęć</div>
+                {% else %}
+                    {% for photo in photos %}
+                        <div id="galeria">
+                            <a href="{{ photo.url_o }}" data-lightbox="roadtrip" data-title="{{ photo.title }}">
+                                <img src="{{ photo.url_q }}">
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
-        {% endfor %}
+        </div>
     </div>
 {% endblock %}

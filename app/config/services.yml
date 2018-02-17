@@ -13,3 +13,9 @@ services:
     arguments: ['@app.artykul_repository']
     calls:
       - [ setContainer, [ '@service_container' ]]
+
+  app.galeria_controller:
+    class: AppBundle\Controller\GaleriaController
+    arguments: ['@logger']
+    calls:
+      - [ setContainer, [ '@service_container' ]]
